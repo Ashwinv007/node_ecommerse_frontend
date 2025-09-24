@@ -173,6 +173,7 @@
     display:flex;
     flex-wrap:nowrap;
     align-items:center;
+    justify-content: center;
     gap:1rem;
     padding:0 2rem;
     height:60px;
@@ -316,7 +317,7 @@
 
 }
 
-.dot-container{
+.dot_container{
     text-align:center;   
     display: flex;
     justify-content: center;
