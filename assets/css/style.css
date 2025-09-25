@@ -35,7 +35,7 @@
 .header{
     grid-area:header;
     background:var(--white);
-    padding:0 2rem;
+    padding:0 4rem;
     display:flex;
     align-items:center;
     justify-content: space-evenly;
@@ -231,7 +231,7 @@
 
 
 .slideshow-container{
-    max-width:1000px;
+    max-width:70%;
     position:relative;
     margin:auto;
     margin-top:1.5rem;
@@ -241,7 +241,7 @@
 .prev, .next{
     cursor:pointer;
     position:absolute;
-    top:50%;
+    top:43%;
     width:auto;
     padding:16px;
     margin-top:-22px;
@@ -312,8 +312,12 @@
 
 
 .mySlides img{
+    /* width:100%;
+    height:263px; */
     width:100%;
-    height:263px;
+    height: auto;
+    object-fit: cover;
+    border-radius:8px;
 
 }
 
@@ -327,7 +331,7 @@
 
 .smartphones{
    
-    padding:2rem;
+    padding:4rem;
 }
 
 .title{
@@ -336,6 +340,7 @@
     align-items:center;
     justify-content:space-between;
     margin-bottom:1rem;
+    position: relative;
     
 }
 
@@ -359,14 +364,14 @@
     height:4px;
     background-color:var(--primary);
     border-radius:2px;
+    z-index:2
 }
 .title hr {
     position: absolute;
-    left: 0;
-    bottom: -1em;
-    width: 100%;
+    top: 3.8em;
+    width:76%;
     height: 1px;
-    background-color: #E0E0E0; /* Light gray color */
+    background-color: var(--border); /* Light gray color */
     border: none;
     margin: 0;
     z-index: 1; /* Behind the blue line */
@@ -392,4 +397,177 @@
     font-size:0.85rem;
     color:var(--primary);
 
+}
+
+
+.smartphones-container{
+    /* display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:1.5rem;
+    margin-top:1rem; */
+    display:flex;
+    gap:1.5rem;
+    overflow-x:auto;
+    scrollbar-width: none;
+    /* padding-bottom:1rem; */
+    padding:1rem 14rem
+}
+
+/* Discount Badge */
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Card image container */
+.mobileImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background1);
+  border-radius:12px;
+}
+
+.mobileImage img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+.card{
+    
+    border:1px solid var(--border);
+    border-radius:12px;
+    width:300px;
+    padding-bottom:1rem;
+    /* padding:1rem */
+}
+.smartphone-details{
+    padding:1rem 0 0 1rem;
+}
+
+
+/* Price styling */
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0.5rem 0;
+}
+
+/* .card p::after{
+    content: '';
+    position:absolute;
+    left:0; 
+    bottom:1em;
+    width:272px;
+    height:4px;
+    background-color:black;
+    border-radius:2px;
+    z-index:2
+}
+ */
+
+
+ .price::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border); /* or #EDEDED */
+    margin-top: 0.5rem;
+    margin-bottom:1rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--light);
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+/* Offer text */
+.offer {
+  font-size: 0.9rem;
+  color: green;
+  margin-bottom: 0.8rem;
+}
+
+/* Add to Cart button */
+.add-to-cart {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #006a99;
+}
+
+
+
+.top-categories{
+        padding:4rem;
+
+}
+.category-card{
+     
+    border:1px solid var(--border);
+    border-radius:12px;
+    width:132px;
+    height: 172px;
+    padding-bottom:1rem;
+}
+
+.top-categories-container{
+    display:flex;
+    gap:4.5rem;
+    overflow-x:auto;
+    scrollbar-width: none;
+    padding:1rem 14rem
+}
+
+
+.categoryImage{
+  position: relative;
+  width: 132px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background1);
+  border-radius:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoryImage img{
+    max-width:auto;
+  max-height: 98px;
+  object-fit: contain;
+}
+
+.category-name{
+    padding:1rem 0 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.category-name p{
+    font-weight: 400;
 }
